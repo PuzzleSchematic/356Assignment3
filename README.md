@@ -1,4 +1,4 @@
-#ECE 356 Assignment 3
+ECE 356 Assignment 3
 -----
 
 Question 1
