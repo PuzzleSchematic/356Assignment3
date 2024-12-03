@@ -19,4 +19,4 @@ airport_starvation_prevention.c
 
 #This program demonstrates another regulated airport that also implements a fair queue; tracking waiting times for each airplane, letting the airplane with the longest wait time to go next
 #The wait time was implemented by making the airplane a structure and providing it with a variable that shows how long the craft has been waiting
-An output can be seen in Figure 3.
+#An output can be seen in Figure 3.
