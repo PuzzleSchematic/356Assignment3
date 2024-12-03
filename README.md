@@ -17,6 +17,12 @@ An output can be see in Figure 2.
 
 airport_starvation_prevention.c
 
-This program demonstrates another regulated airport that also implements a fair queue; tracking waiting times for each airplane, letting the airplane with the longest wait time to go next
-The wait time was implemented by making the airplane a structure and providing it with a variable that shows how long the craft has been waiting
+This program demonstrates another regulated airport that also implements a fair queue; tracking waiting times for each airplane, letting the airplane with the longest wait time to go next.
+The wait time was implemented by making the airplane a structure and providing it with a variable that shows how long the craft has been waiting.
+There were 3 functions designed to help with this, search, enqueue, and dequeue;
+Search went through the waiting queue and looked for the airplane with the longest wait time, returning the index in the queue with the longest wait time.
+Enqueue puts the airplane into the queue with given their id, and provides the plane with a beginning waiting time.
+Dequeue uses the index returned from Search and removes that plane from the queue, reindexing the other planes to fill the gap.
+Once a plane leaves the queue, it is the only plane able take control of the Control Tower and runway they require.
+This removes any posibilities of starvation.
 An output can be seen in Figure 3.
