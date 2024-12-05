@@ -26,3 +26,15 @@ Dequeue uses the index returned from Search and removes that plane from the queu
 Once a plane leaves the queue, it is the only plane able take control of the Control Tower and runway they require.
 This removes any posibilities of starvation.
 An output can be seen in Figure 3.
+
+Question 2
+-----
+
+chat_server.c & chat_client.c
+
+These programs work in tandem with each other, simulating a multi-client chat application using socket programming. The server acts as a central hub facilitating communication between the cleints, allowing them to exchange messages.
+The server was initialized (using socket()) on a designated port 5001 (using bind()) and listens for incoming clients (using listen() to listen and accept() to accept new clients).
+The client connects to the server using its IP address and port number (using connect()). Once connected the client can send messges to the server which then receives (using recv()) and broadcasts the message to all other connected clients.
+Each of the messages sent from the clients to the server are uniquely tagged by the server indicating which client the message is from.
+The server uses multithreading to handle multiple clients at once with each client assigned a unique thread. Mutexes are used to ensure thread-safe management of shared resoureces like the list of connected clients.
+If a client disconnects, the server detects this and removes the client from the list, ensuring the other clients aren't affected.
